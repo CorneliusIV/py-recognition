@@ -20,8 +20,7 @@ except:
     print('There was an error opening the image')
 
 imgobj = {'Bytes': imgbytes}
-imgattrs = ['ALL']
 
-response = client.detect_faces(Image=imgobj, Attributes=imgattrs)
+response = client.detect_faces(Image=imgobj, Attributes=['ALL'])
 
 print(response)
